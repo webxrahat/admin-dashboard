@@ -2,15 +2,16 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import Footer from '../pages/Footer';
-import Navbar from '../pages/Navbar';
+import Header from '../pages/Header';
 
 const Main = () => {
   return (
+
     <div>
-      <Navbar/>
-      <Outlet/>
-      <Dashboard/>
-      <Footer/>
+      <Header />
+      <Outlet />
+      <Dashboard />
+      <Footer />
     </div>
   );
 };
