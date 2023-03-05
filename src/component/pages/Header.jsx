@@ -14,8 +14,8 @@ function Header() {
         <Navbar.Brand href="#home">NiceAdmin</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </div>
-       <div className="d-flex justify-content-between align-items-center ms-auto w-50">
-       <input type="text" placeholder="Search" className="d-flex" />
+       <div className="d-flex justify-content-between align-items-center ms-auto w-75">
+       <input type="text" placeholder="Search" className="" />
       <div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
