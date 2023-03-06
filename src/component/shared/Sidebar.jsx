@@ -6,13 +6,13 @@ const Sidebar = () => {
 
   return (
     <div className='shadow-lg col-2 mt-5 px-5'>
-      <Nav className="flex-column my-3 align-items-start">
+      <Nav className="flex-column my-3 align-items-start scrollmenu">
         <div className="d-flex align-items-center justify-content-center mt-3 i">
-          <div className="mb-1">
+          <div className="mb-1 active">
             <Grid />
           </div>
           <div>
-            <Nav.Link href="#home">Dashboard</Nav.Link>
+            <Nav.Link active href="#home">Dashboard</Nav.Link>
           </div>
         </div>
         <div className="d-flex align-items-center justify-content-center i">

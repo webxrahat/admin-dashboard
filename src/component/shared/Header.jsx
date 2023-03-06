@@ -21,7 +21,7 @@ function Header() {
       <div style={{width:"80%"}} className="d-flex justify-content-between align-items-center ms-auto">
         <div>
         <input style={{width:"300px", margin:"0 20px"}} type="text" placeholder="Search" className="p-1"/>
-        <Search style={{marginLeft:"-50px"}}/> 
+        <Search style={{marginLeft:"-15%"}}/> 
         </div>
         <div>
           <Navbar.Collapse id="basic-navbar-nav">

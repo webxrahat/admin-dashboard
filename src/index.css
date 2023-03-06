@@ -16,7 +16,7 @@ a{
   color: #012970 !important;
   font-weight: 500 !important;
 }
-a:active{
+a.active{
   color: #4154f1 !important;
 }
 a:hover {
@@ -25,4 +25,8 @@ a:hover {
 .i:hover{
   color: #4154f1 !important;
   cursor: pointer;
+}
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
 }
