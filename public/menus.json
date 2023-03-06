@@ -1,0 +1,55 @@
+[
+  {
+    "id": "01",
+    "name": "Dashboard"
+  },
+  {
+    "id": "02",
+    "name": "Components"
+  },
+  {
+    "id": "03",
+    "name": "Forms"
+  },
+  {
+    "id": "04",
+    "name": "Tables"
+  },
+  {
+    "id": "05",
+    "name": "Charts"
+  },
+  {
+    "id": "06",
+    "name": "Icons"
+  },
+  {
+    "id": "07",
+    "name": "Profile"
+  },
+  {
+    "id": "08",
+    "name": "F.A.Q"
+  },
+  {
+    "id": "09",
+    "name": "Contact"
+  },
+  {
+    "id": "10",
+    "name": "Register"
+  },
+  {
+    "id": "11",
+    "name": "Login"
+  },
+  {
+    "id": "12",
+    "name": "Error 404"
+  },
+  {
+    "id": "13",
+    "name": "Blank"
+  }
+  
+]

@@ -1,17 +1,19 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
-import Footer from '../pages/Footer';
-import Header from '../pages/Header';
+import Sidebar from '../shared/Sidebar';
+import Header from '../shared/Header';
 
 const Main = () => {
   return (
 
     <div>
       <Header />
+      <div className='row'>
+      <Sidebar />
+      <div style={{background:"#f6f9ff"}} className='col-10'>
       <Outlet />
-      <Dashboard />
-      <Footer />
+      </div>
+      </div>
     </div>
   );
 };
