@@ -1,21 +1,23 @@
 import { Nav } from "react-bootstrap";
 import { BarChart, BoxArrowInRight, CardList, DashCircle, Envelope, FileEarmark, Gem, Grid, JournalText, LayoutTextWindowReverse, MenuButtonWide, Person, QuestionCircle } from 'react-bootstrap-icons';
+import { Link, useMatches } from "react-router-dom";
 
 const Sidebar = () => {
-
+  const router = useMatches()
+  console.log("router", router);
 
   return (
-    <div className='shadow-lg col-2 mt-5 px-5'>
-      <Nav className="flex-column my-3 align-items-start scrollmenu">
-        <div className="d-flex align-items-center justify-content-center mt-3 i">
-          <div className="mb-1 active">
+    <aside className='shadow-lg sidebar col-2 mt-5 px-4'>
+      <Nav className="flex-column  my-3 align-items-start">
+        <div className="d-flex align-items-center justify-content-start mt-3 i G">
+          <div className="mb-1 active ">
             <Grid />
           </div>
           <div>
-            <Nav.Link active href="#home">Dashboard</Nav.Link>
+            <Nav.Link as={Link} to="/profile">Dashboard</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
             <MenuButtonWide />
           </div>
@@ -23,7 +25,7 @@ const Sidebar = () => {
             <Nav.Link className="mt-2" href="#home">Components</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
             <JournalText />
           </div>
@@ -31,89 +33,89 @@ const Sidebar = () => {
             <Nav.Link className="mt-2" href="#home">Forms</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
-            <LayoutTextWindowReverse/>
+            <LayoutTextWindowReverse />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Tables</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-2">
-            <BarChart/>
+            <BarChart />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Charts</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-2">
-            <Gem/>
+            <Gem />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Icons</Nav.Link>
           </div>
         </div>
-        <p style={{fontSize:"13px"}} className="mt-3 text-muted"><small>PAGES</small></p>
-        <div className="d-flex align-items-center justify-content-center i">
+        <p style={{ fontSize: "13px" }} className="mt-3 text-muted"><small>PAGES</small></p>
+        <div className="d-flex align-items-center justify-content-start i">
           <div>
-            <Person/>
+            <Person />
           </div>
           <div>
             <Nav.Link href="#home">Profile</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
-            <QuestionCircle/>
+            <QuestionCircle />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">F.A.Q</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
-            <Envelope/>
+            <Envelope />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Contact</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
-            <CardList/>
+            <CardList />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Register</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-2">
-            <BoxArrowInRight/>
+            <BoxArrowInRight />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Login</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-2">
-            <DashCircle/>
+            <DashCircle />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Error 404</Nav.Link>
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-center i">
+        <div className="d-flex align-items-center justify-content-start i">
           <div className="mt-1">
-            <FileEarmark/>
+            <FileEarmark />
           </div>
           <div>
             <Nav.Link className="mt-2" href="#home">Blank</Nav.Link>
           </div>
         </div>
       </Nav>
-    </div>
+    </aside>
   );
 };
 

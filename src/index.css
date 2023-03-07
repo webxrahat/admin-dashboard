@@ -12,21 +12,75 @@ code {
     monospace;
 }
 
-a{
+a {
   color: #012970 !important;
   font-weight: 500 !important;
 }
-a.active{
+
+/* a.active {
   color: #4154f1 !important;
-}
+} */
+
 a:hover {
   color: #4154f1 !important;
 }
-.i:hover{
+
+.i:hover {
   color: #4154f1 !important;
   cursor: pointer;
+  background-color: #d3e2ff34;
+  border-radius: 3px;
 }
-.scrollmenu {
-  overflow: auto;
-  white-space: nowrap;
+
+.i {
+  width: 220px;
+  display: flex;
+  justify-content: start;
+  height: auto;
+  margin-top: 5px;
+  padding:0 10%;
+
+}
+
+.G {
+  color: #4154f1 !important;
+  cursor: pointer;
+  background-color: #d3e2ff34;
+  border-radius: 3px;
+}
+
+.sidebar {
+  max-width: 100%;
+  max-height: 93vh;
+  overflow-y: auto;
+  z-index: 996;
+  transition: all 0.3s;
+  scrollbar-width: thin;
+  scrollbar-color: #afb0b3 transparent;
+  box-shadow: 0px 0px 20px rgb(1 41 112 / 10%);
+  background-color: #fff;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
+}
+
+.search-input {
+  width: 300px;
+  margin: 0 20px;
+  border-radius: 3px;
+  border: 1px solid #a7aebdcf;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+
+.search-input:hover {
+  box-shadow: 0px 0px 10px rgba(206, 207, 210, 0.898);
+
 }
