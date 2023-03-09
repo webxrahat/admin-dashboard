@@ -1,20 +1,20 @@
 import { Nav } from "react-bootstrap";
 import { BarChart, BoxArrowInRight, CardList, DashCircle, Envelope, FileEarmark, Gem, Grid, JournalText, LayoutTextWindowReverse, MenuButtonWide, Person, QuestionCircle } from 'react-bootstrap-icons';
-import { Link, useMatches } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
-  const router = useMatches()
-  console.log("router", router);
-
+const Sidebar = ({sidebarOpen}) => {
+  // const router = useMatches()
+  // console.log("router", router);
+  const sidebarClass = sidebarOpen ? "sidebar-open" : "sidebar";
   return (
-    <aside className='shadow-lg sidebar col-2 mt-5 px-4'>
-      <Nav className="flex-column  my-3 align-items-start">
-        <div className="d-flex align-items-center justify-content-start mt-3 i G">
-          <div className="mb-1 active ">
+    <aside className={`shadow-lg sidebar-open mt-5 px-4 ${sidebarClass}`}>
+      <Nav className="flex-column  mt-3 align-items-start">
+        <div className="d-flex align-items-center justify-content-start me-5 mt-3 i G">
+          <div className="mb-1">
             <Grid />
           </div>
           <div>
-            <Nav.Link as={Link} to="/profile">Dashboard</Nav.Link>
+            <Nav.Link className ="G"as={Link} to="/profile">Dashboard</Nav.Link>
           </div>
         </div>
         <div className="d-flex align-items-center justify-content-start i">
@@ -57,7 +57,7 @@ const Sidebar = () => {
             <Nav.Link className="mt-2" href="#home">Icons</Nav.Link>
           </div>
         </div>
-        <p style={{ fontSize: "13px" }} className="mt-3 text-muted"><small>PAGES</small></p>
+        <p style={{ fontSize: "13px" }} className="mt-3 text-muted ms-4 ps-1"><small>PAGES</small></p>
         <div className="d-flex align-items-center justify-content-start i">
           <div>
             <Person />

@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../shared/Sidebar';
 import Header from '../shared/Header';
-import { Container } from 'react-bootstrap';
 
 const Main = () => {
+  const [sidebarOpen, setSideBarOpen] = useState(true)
+
+  const handleViewSidebar = () => {
+    setSideBarOpen(!sidebarOpen)
+    // console.log("click");
+  }
+
   return (
-    <Container fluid>
-      <Header />
-      <div className='row'>
-      <Sidebar />
-      <div style={{backgroundColor:"#f6f9ff", marginTop:"30px", paddingTop:"50px"}} className='col-10'>
-      <Outlet />
+    <div>
+      <Header handleViewSidebar={handleViewSidebar} />
+      <div className='d-flex'>
+        <Sidebar sidebarOpen={sidebarOpen}/>
+        <div style={{ backgroundColor: "#f6f9ff", marginTop: "50px", padding: "50px", width: "100vw", height: "93vh" }}>
+          <Outlet />
+        </div>
       </div>
-      </div>
-    </Container>
+    </div>
   );
 };
 
