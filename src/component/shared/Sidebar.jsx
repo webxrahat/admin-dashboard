@@ -2,19 +2,19 @@ import { Nav } from "react-bootstrap";
 import { BarChart, BoxArrowInRight, CardList, DashCircle, Envelope, FileEarmark, Gem, Grid, JournalText, LayoutTextWindowReverse, MenuButtonWide, Person, QuestionCircle } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
 
-const Sidebar = ({sidebarOpen}) => {
+const Sidebar = ({ sidebarOpen }) => {
   // const router = useMatches()
   // console.log("router", router);
   const sidebarClass = sidebarOpen ? "sidebar-open" : "sidebar";
   return (
-    <aside className={`shadow-lg sidebar-open mt-5 px-4 ${sidebarClass}`}>
+    <aside className={`shadow-lg sidebar-open mt-5 pe-4 ps-3 ${sidebarClass}`}>
       <Nav className="flex-column  mt-3 align-items-start">
         <div className="d-flex align-items-center justify-content-start me-5 mt-3 i G">
           <div className="mb-1">
             <Grid />
           </div>
           <div>
-            <Nav.Link className ="G"as={Link} to="/profile">Dashboard</Nav.Link>
+            <Nav.Link className="G" as={Link} to="/profile">Dashboard</Nav.Link>
           </div>
         </div>
         <div className="d-flex align-items-center justify-content-start i">

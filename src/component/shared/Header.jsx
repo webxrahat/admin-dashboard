@@ -1,12 +1,16 @@
 import React from 'react';
-import { Bell, ChatLeftText, CheckCircle, Circle, ExclamationCircle, InfoCircle, List, Search } from 'react-bootstrap-icons';
+import { Bell, BoxArrowRight, ChatLeftText, CheckCircle, Circle, ExclamationCircle, Gear, InfoCircle, List, Person, QuestionCircle, Search } from 'react-bootstrap-icons';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/logo.png'
 import profileImg from '../../assets/profile-img.jpg'
 
-function Header({ handleViewSidebar }) {
+function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewNotification, notificationOpen }) {
+
+
+  const profileClass = profileOpen ? "d-none" : "d-block";
+  const notificationClass = notificationOpen ? "d-block" : "d-none";
   return (
     <Navbar bg="white" expand="lg" className='d-flex align-items-center px-3 shadow-sm fixed-top'>
       <div style={{ width: "20%" }} className='d-flex align-items-center justify-content-between'>
@@ -26,14 +30,14 @@ function Header({ handleViewSidebar }) {
         </div>
         <div>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav>
+            <Nav className='d-flex align-items-center'>
               <div className='position-relative me-2'>
-                <Nav.Link href="#home">
+                <Nav.Link onClick={handleViewNotification} href="#home">
                   <Bell size={22} />
                   <p className='badge badge-number bg-primary text-white'>
                     <small style={{ fontSize: "12px", padding: "0px 5px" }}>4</small>
                   </p>
-                  <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-24.8px, 35.2px, 0px)" }} className='dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications show'>
+                  <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-24.8px, 35.2px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications show ${notificationClass}`}>
                     <li className='dropdown-header d-flex align-items-center'>
                       You have 4 new notifications
                       <Nav.Link><span className='badge rounded-pill bg-primary p-2 ms-2'>View all</span></Nav.Link>
@@ -84,14 +88,53 @@ function Header({ handleViewSidebar }) {
               <div className='position-relative me-3'>
                 <Nav.Link href="#home"> <ChatLeftText size={22} /><p className='position-absolute bg-success text-white badge-number badge p-1'><small style={{ fontSize: "12px", padding: "0px 1px" }}>3</small></p></Nav.Link>
               </div>
-              <li class="nav-item dropdown pe-3">
-                <Nav.Link className="nav-link nav-profile d-flex align-items-center pe-0 show" href="#" data-bs-toggle="dropdown" aria-expanded="true">
-                  <img style={{width:"40px"}} src={profileImg} alt="Profile" class="rounded-circle" />
-                  <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+              <li className="nav-item dropdown pe-3">
+                <Nav.Link onClick={handleViewProfile} className="nav-link nav-profile d-flex align-items-center pe-0 show" href="#" data-bs-toggle="dropdown" aria-expanded="true">
+                  <img style={{ width: "40px" }} src={profileImg} alt="Profile" className="rounded-circle" />
+                  <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                 </Nav.Link>
-               <ul style={{position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-16px, 38.4px, 0px)"}} className='dropdown-menu dropdown-menu-end dropdown-menu-arrow profile show'>
-
-               </ul>
+                <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-16px, 55.4px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow profile show ${profileClass}`}>
+                  <li className="dropdown-header">
+                    <h6 className='k-drop'>Kevin Anderson</h6>
+                    <span>Web Designer</span>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li className='li-hover'>
+                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                      <Person className='me-2 ms-2 icon' size={18} />
+                      <span className='i-drop'>My Profile</span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li className='li-hover'>
+                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                      <Gear className='me-2 ms-2 icon' size={18} />
+                      <span className='i-drop'>Account Settings</span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li className='li-hover'>
+                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                      <QuestionCircle className='me-2 ms-2 icon' />
+                      <span className='i-drop'>Need Help?</span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li className='li-hover'>
+                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                      <BoxArrowRight className='me-2 ms-2 icon' />
+                      <span className='i-drop'>Sign Out</span>
+                    </Nav.Link>
+                  </li>
+                </ul>
               </li>
             </Nav>
           </Navbar.Collapse>
