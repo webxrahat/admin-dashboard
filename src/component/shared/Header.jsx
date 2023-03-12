@@ -12,7 +12,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
   const profileClass = profileOpen ? "d-none" : "d-block";
   const notificationClass = notificationOpen ? "d-block" : "d-none";
   return (
-    <Navbar bg="white" expand="lg" className='d-flex align-items-center px-3 shadow-sm fixed-top'>
+    <Navbar bg="white" expand="lg" className='d-flex align-items-center px-3 shadow-sm fixed-top py-0'>
       <div style={{ width: "20%" }} className='d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center justify-content-lg-start'>
           <Nav.Link>
@@ -32,19 +32,20 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className='d-flex align-items-center'>
               <div className='position-relative me-2'>
-                <Nav.Link onClick={handleViewNotification} href="#home">
-                  <Bell size={22} />
+                 <Nav.Link onClick={handleViewNotification} href="#">
+                 <Bell size={22} />
                   <p className='badge badge-number bg-primary text-white'>
                     <small style={{ fontSize: "12px", padding: "0px 5px" }}>4</small>
                   </p>
-                  <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-24.8px, 35.2px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications show ${notificationClass}`}>
+                 </Nav.Link>
+                  <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-24.8px, 30.2px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications show ${notificationClass}`}>
                     <li className='dropdown-header d-flex align-items-center'>
                       You have 4 new notifications
                       <Nav.Link><span className='badge rounded-pill bg-primary p-2 ms-2'>View all</span></Nav.Link>
                     </li>
                     <li><hr className='dropdown-divider' /></li>
                     <li className='notification-item'>
-                      <ExclamationCircle className='text-warning notifications-i' size={28} />
+                      <ExclamationCircle className='text-warning notifications-i' size={24} />
                       <div>
                         <h4>lorem ipsum</h4>
                         <p>Quae dolorem earum veritatis oditseno</p>
@@ -53,7 +54,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                     </li>
                     <li><hr className='dropdown-divider' /></li>
                     <li className='notification-item'>
-                      <Circle className='text-danger notifications-i' size={26} />
+                      <Circle className='text-danger notifications-i' size={24} />
                       <div>
                         <h4>Atque rerum nesciunt</h4>
                         <p>Quae dolorem earum veritatis oditseno</p>
@@ -62,7 +63,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                     </li>
                     <li><hr className='dropdown-divider' /></li>
                     <li className='notification-item'>
-                      <CheckCircle className='text-success notifications-i' size={28} />
+                      <CheckCircle className='text-success notifications-i' size={24} />
                       <div>
                         <h4>Sit rerum fuga</h4>
                         <p>Quae dolorem earum veritatis oditseno</p>
@@ -71,7 +72,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                     </li>
                     <li><hr className='dropdown-divider' /></li>
                     <li className='notification-item'>
-                      <InfoCircle className='text-primary notifications-i' size={28} />
+                      <InfoCircle className='text-primary notifications-i' size={24} />
                       <div>
                         <h4>Dicta reprehenderit</h4>
                         <p>Quae dolorem earum veritatis oditseno</p>
@@ -80,20 +81,19 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                     </li>
                     <li><hr className='dropdown-divider' /></li>
                     <li className='dropdown-footer'>
-                      <Nav.Link>Show all notifications</Nav.Link>
+                      <Nav.Link><u>Show all notifications</u></Nav.Link>
                     </li>
                   </ul>
-                </Nav.Link>
               </div>
               <div className='position-relative me-3'>
-                <Nav.Link href="#home"> <ChatLeftText size={22} /><p className='position-absolute bg-success text-white badge-number badge p-1'><small style={{ fontSize: "12px", padding: "0px 1px" }}>3</small></p></Nav.Link>
+                <Nav.Link href="#"> <ChatLeftText size={22} /><p className='position-absolute bg-success text-white badge-number badge p-1'><small style={{ fontSize: "12px", padding: "0px 1px" }}>3</small></p></Nav.Link>
               </div>
               <li className="nav-item dropdown pe-3">
                 <Nav.Link onClick={handleViewProfile} className="nav-link nav-profile d-flex align-items-center pe-0 show" href="#" data-bs-toggle="dropdown" aria-expanded="true">
                   <img style={{ width: "40px" }} src={profileImg} alt="Profile" className="rounded-circle" />
                   <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                 </Nav.Link>
-                <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-16px, 55.4px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow profile show ${profileClass}`}>
+                <ul style={{ position: "absolute", inset: "0px 0px auto auto", margin: "0px", transform: "translate3d(-16px, 48.4px, 0px)" }} className={`dropdown-menu dropdown-menu-end dropdown-menu-arrow profile show ${profileClass}`}>
                   <li className="dropdown-header">
                     <h6 className='k-drop'>Kevin Anderson</h6>
                     <span>Web Designer</span>
@@ -101,8 +101,8 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                  <li className='li-hover'>
-                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                  <li>
+                    <Nav.Link className="dropdown-item d-flex align-items-center li-hover" href="/">
                       <Person className='me-2 ms-2 icon' size={18} />
                       <span className='i-drop'>My Profile</span>
                     </Nav.Link>
@@ -110,8 +110,8 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                  <li className='li-hover'>
-                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                  <li>
+                    <Nav.Link className="dropdown-item d-flex align-items-center li-hover" href="/">
                       <Gear className='me-2 ms-2 icon' size={18} />
                       <span className='i-drop'>Account Settings</span>
                     </Nav.Link>
@@ -119,8 +119,8 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                  <li className='li-hover'>
-                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                  <li>
+                    <Nav.Link className="dropdown-item d-flex align-items-center li-hover" href="/">
                       <QuestionCircle className='me-2 ms-2 icon' />
                       <span className='i-drop'>Need Help?</span>
                     </Nav.Link>
@@ -128,8 +128,8 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                  <li className='li-hover'>
-                    <Nav.Link className="dropdown-item d-flex align-items-center" href="/">
+                  <li>
+                    <Nav.Link className="dropdown-item d-flex align-items-center li-hover" href="/">
                       <BoxArrowRight className='me-2 ms-2 icon' />
                       <span className='i-drop'>Sign Out</span>
                     </Nav.Link>
