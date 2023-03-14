@@ -13,7 +13,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
   const notificationClass = notificationOpen ? "d-block" : "d-none";
   return (
     <Navbar bg="white" expand="lg" className='d-flex align-items-center px-3 shadow-sm fixed-top py-0'>
-      <div style={{ width: "20%" }} className='d-flex align-items-center justify-content-between'>
+      <div style={{ width: "22%" }} className='d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center justify-content-lg-start'>
           <Nav.Link>
             <img style={{ maxHeight: "26px", marginRight: "6px" }} src={logo} alt="logo" />
@@ -23,7 +23,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
         </div>
         <List onClick={handleViewSidebar} style={{ cursor: "pointer" }} color="#012970" size={32} />
       </div>
-      <div style={{ width: "80%" }} className="d-flex justify-content-between align-items-center ms-auto">
+      <div style={{ width: "78%" }} className="d-flex justify-content-between align-items-center ms-auto">
         <div>
           <input type="text" placeholder="Search" className="p-1 search-input" />
           <Search style={{ marginLeft: "-15%" }} />
@@ -32,7 +32,7 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className='d-flex align-items-center'>
               <div className='position-relative me-2'>
-                 <Nav.Link onClick={handleViewNotification} href="#">
+                 <Nav.Link onClick={handleViewNotification}>
                  <Bell size={22} />
                   <p className='badge badge-number bg-primary text-white'>
                     <small style={{ fontSize: "12px", padding: "0px 5px" }}>4</small>
@@ -86,10 +86,10 @@ function Header({ handleViewSidebar, handleViewProfile, profileOpen, handleViewN
                   </ul>
               </div>
               <div className='position-relative me-3'>
-                <Nav.Link href="#"> <ChatLeftText size={22} /><p className='position-absolute bg-success text-white badge-number badge p-1'><small style={{ fontSize: "12px", padding: "0px 1px" }}>3</small></p></Nav.Link>
+                <Nav.Link> <ChatLeftText size={22} /><p className='position-absolute bg-success text-white badge-number badge p-1'><small style={{ fontSize: "12px", padding: "0px 1px" }}>3</small></p></Nav.Link>
               </div>
               <li className="nav-item dropdown pe-3">
-                <Nav.Link onClick={handleViewProfile} className="nav-link nav-profile d-flex align-items-center pe-0 show" href="#" data-bs-toggle="dropdown" aria-expanded="true">
+                <Nav.Link onClick={handleViewProfile} className="nav-link nav-profile d-flex align-items-center pe-0 show" data-bs-toggle="dropdown" aria-expanded="true">
                   <img style={{ width: "40px" }} src={profileImg} alt="Profile" className="rounded-circle" />
                   <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                 </Nav.Link>

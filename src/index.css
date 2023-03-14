@@ -40,7 +40,7 @@ a:hover {
 }
 
 .i {
-  width: 220px;
+  width: 260px;
   display: flex;
   justify-content: start;
   height: auto;
@@ -49,15 +49,19 @@ a:hover {
 
 }
 
-.G {
+.active{
   color: #4154f1 !important;
-  cursor: pointer;
   background-color: #d3e2ff34;
-  border-radius: 3px;
+  border-radius: 5px;
 }
-
+.sub{
+  color: #4154f1 !important;
+}
+.primary{
+  background-color: #4154f1 !important;
+}
 .sidebar-open {
-  min-width: 15%;
+  min-width: 20%;
   transition: all 0.5s;
   max-height: 97vh;
   overflow-y: auto;
@@ -256,4 +260,48 @@ a:hover {
 
 .k-drop {
   color: #3d3e41 !important;
+}
+.error-404{
+  padding: 30px;
+  background-color: #f6f9ff;
+}
+.error-404 h1 {
+  font-size: 180px;
+  font-weight: 500;
+  color: #4154f1;
+  margin-bottom: 0;
+  line-height: 150px;
+}
+.error-404 h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #012970;
+  margin-bottom: 30px;
+}
+.btn {
+    background: #51678f !important;
+    color: #fff !important;
+    padding: 8px 30px !important;
+}
+.btn:hover{
+  background: #535e73 !important;
+  color: #fff !important;
+}
+.ms{
+  margin-left: 25%;
+}
+.nav-content {
+  padding: 5px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-content a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500 !important;
+  color: #012970;
+  transition: 0.3;
+  padding: 10px 0 10px 40px;
+  transition: 0.3s;
 }
