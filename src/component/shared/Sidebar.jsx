@@ -3,11 +3,11 @@ import { Nav } from "react-bootstrap";
 import { BarChart, BoxArrowInRight, CardList, ChevronDown, Circle, DashCircle, Envelope, FileEarmark, Gem, Grid, JournalText, LayoutTextWindowReverse, MenuButtonWide, Person, QuestionCircle } from 'react-bootstrap-icons';
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
-  const [collapse2 , setCollapse2] = useState(false)
-  const [collapse3 , setCollapse3] = useState(false)
-  const [collapse4 , setCollapse4] = useState(false)
-  const [collapse5 , setCollapse5] = useState(false)
+const Sidebar = ({ sidebarOpen, handleCollapse, collapse }) => {
+  const [collapse2, setCollapse2] = useState(false)
+  const [collapse3, setCollapse3] = useState(false)
+  const [collapse4, setCollapse4] = useState(false)
+  const [collapse5, setCollapse5] = useState(false)
   const [active, setActive] = useState(false)
   // const a = active ? "active" : "";
   // const router = useMatches()
@@ -24,7 +24,7 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
   const collapseClass5 = collapse5 ? "menuUp" : "menuDown";
   const upDownClass5 = collapse5 ? "up" : "down";
   const location = useLocation()
-  
+
   return (
     <aside className={`shadow-lg sidebar-open mt-4 pe-4 ps-3 ${sidebarClass}`}>
       <Nav className="flex-column  mt-3 align-items-start">
@@ -39,13 +39,13 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
         </div>
 
         <li className="nav-item">
-          <div onClick={handleCollapse} className={`d-flex align-items-center justify-content-between i ${active ? "active": ""}`}>
-            <div onClick={()=> setActive(!active)} className="d-flex justify-content-center align-items-center">
+          <div onClick={handleCollapse} className={`d-flex align-items-center justify-content-between i ${active ? "active" : ""}`}>
+            <div onClick={() => setActive(!active)} className="d-flex justify-content-center align-items-center">
               <MenuButtonWide />
               <Nav.Link className="mt-1">Components</Nav.Link>
             </div>
             <div className="ms">
-              <ChevronDown className={`${upDownClass}`}/>
+              <ChevronDown className={`${upDownClass}`} />
             </div>
           </div>
           <ul className={`nav-content collapse show ${collapseClass}`}>
@@ -82,13 +82,13 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div onClick={()=> setCollapse2(!collapse2)} className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={() => setCollapse2(!collapse2)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <JournalText />
               <Nav.Link className="mt-1">Forms</Nav.Link>
             </div>
             <div className="ms">
-              <ChevronDown className={`${upDownClass2}`}/>
+              <ChevronDown className={`${upDownClass2}`} />
             </div>
           </div>
           <ul className={`nav-content collapse show ${collapseClass2}`}>
@@ -107,13 +107,13 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </ul>
         </li>
         <li className="nav-tem">
-          <div onClick={()=> setCollapse3(!collapse3)} className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={() => setCollapse3(!collapse3)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <LayoutTextWindowReverse />
               <Nav.Link className="mt-1">Tables</Nav.Link>
             </div>
             <div>
-              <ChevronDown className={`${upDownClass3}`}/>
+              <ChevronDown className={`${upDownClass3}`} />
             </div>
           </div>
           <ul className={`nav-content collapse show ${collapseClass3}`}>
@@ -132,13 +132,13 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div onClick={()=> setCollapse4(!collapse4)} className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={() => setCollapse4(!collapse4)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <BarChart />
               <Nav.Link className="mt-1">Charts</Nav.Link>
             </div>
             <div>
-              <ChevronDown className={`${upDownClass4}`}/>
+              <ChevronDown className={`${upDownClass4}`} />
             </div>
           </div>
           <ul className={`nav-content collapse show ${collapseClass4}`}>
@@ -157,13 +157,13 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div onClick={()=> setCollapse5(!collapse5)} className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={() => setCollapse5(!collapse5)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <Gem />
               <Nav.Link className="mt-1">Icons</Nav.Link>
             </div>
             <div>
-              <ChevronDown className={`${upDownClass5}`}/>
+              <ChevronDown className={`${upDownClass5}`} />
             </div>
           </div>
           <ul className={`nav-content collapse show ${collapseClass5}`}>
