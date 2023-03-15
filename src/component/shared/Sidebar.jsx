@@ -29,12 +29,12 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
     <aside className={`shadow-lg sidebar-open mt-4 pe-4 ps-3 ${sidebarClass}`}>
       <Nav className="flex-column  mt-3 align-items-start">
 
-        <div className={`d-flex align-items-center justify-content-start me-5 mt-3 i ${location.pathname === '/dashboard' && 'active'}`}>
+        <div className={`d-flex align-items-center justify-content-start me-5 mt-3 i ${location.pathname === '/home/dashboard' && 'active'}`}>
           <div className="mb-1">
             <Grid />
           </div>
           <div>
-            <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+            <Nav.Link as={Link} to="/home/dashboard">Dashboard</Nav.Link>
           </div>
         </div>
 
@@ -50,32 +50,32 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </div>
           <ul className={`nav-content collapse show ${collapseClass}`}>
             <li>
-              <Nav.Link as={Link} to="/alert" className={`ms-4 ${location.pathname === '/alert' && 'sub'}`}>
-                <Circle className={`me-2 ${location.pathname === '/alert' && 'primary rounded'}`} size={6} />
+              <Nav.Link as={Link} to="/component/alert" className={`ms-4 ${location.pathname === '/component/alert' && 'sub'}`}>
+                <Circle className={`me-2 ${location.pathname === '/component/alert' && 'primary rounded'}`} size={6} />
                 <span>Alerts</span>
               </Nav.Link>
             </li>
             <li>
-              <Nav.Link as={Link} to="/accordion" className={`ms-4 ${location.pathname === '/accordion' && 'sub'}`}>
-                <Circle className={`me-2 ${location.pathname === '/accordion' && 'primary rounded'}`} size={6} />
+              <Nav.Link as={Link} to="/component/accordion" className={`ms-4 ${location.pathname === '/component/accordion' && 'sub'}`}>
+                <Circle className={`me-2 ${location.pathname === '/component/accordion' && 'primary rounded'}`} size={6} />
                 <span>Accordion</span>
               </Nav.Link>
             </li>
             <li>
-              <Nav.Link as={Link} to="/badges" className={`ms-4 ${location.pathname === '/badges' && 'sub'}`}>
-                <Circle className={`me-2 ${location.pathname === '/badges' && 'primary rounded'}`} size={6} />
+              <Nav.Link as={Link} to="/component/badges" className={`ms-4 ${location.pathname === '/component/badges' && 'sub'}`}>
+                <Circle className={`me-2 ${location.pathname === '/component/badges' && 'primary rounded'}`} size={6} />
                 <span>Badges</span>
               </Nav.Link>
             </li>
             <li>
-              <Nav.Link as={Link} to="/breadcrumbs" className={`ms-4 ${location.pathname === '/breadcrumbs' && 'sub'}`}>
-                <Circle className={`me-2 ${location.pathname === '/breadcrumbs' && 'primary rounded'}`} size={6} />
+              <Nav.Link as={Link} to="/component/breadcrumbs" className={`ms-4 ${location.pathname === '/component/breadcrumbs' && 'sub'}`}>
+                <Circle className={`me-2 ${location.pathname === '/component/breadcrumbs' && 'primary rounded'}`} size={6} />
                 <span>Breadcrumbs</span>
               </Nav.Link>
             </li>
             <li>
-              <Nav.Link as={Link} to="/buttons" className={`ms-4 ${location.pathname === '/buttons' && 'sub'}`}>
-                <Circle className={`me-2 ${location.pathname === '/buttons' && 'primary rounded'}`} size={6} />
+              <Nav.Link as={Link} to="/component/buttons" className={`ms-4 ${location.pathname === '/component/buttons' && 'sub'}`}>
+                <Circle className={`me-2 ${location.pathname === '/component/buttons' && 'primary rounded'}`} size={6} />
                 <span>Buttons</span>
               </Nav.Link>
             </li>
@@ -182,28 +182,28 @@ const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
           </ul>
         </li>
         <p style={{ fontSize: "13px" }} className="mt-3 text-muted ms-4 ps-1"><small>PAGES</small></p>
-        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/profile' && 'active'}`}>
+        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/home/profile' && 'active'}`}>
           <div>
             <Person />
           </div>
           <div>
-            <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+            <Nav.Link as={Link} to="/home/profile">Profile</Nav.Link>
           </div>
         </div>
-        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/faq' && 'active'}`}>
+        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/home/faq' && 'active'}`}>
           <div>
             <QuestionCircle />
           </div>
           <div>
-            <Nav.Link className="mt-1" as={Link} to="/faq">F.A.Q</Nav.Link>
+            <Nav.Link className="mt-1" as={Link} to="/home/faq">F.A.Q</Nav.Link>
           </div>
         </div>
-        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/contact' && 'active'}`}>
+        <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/home/contact' && 'active'}`}>
           <div>
             <Envelope />
           </div>
           <div>
-            <Nav.Link className="mt-1" as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link className="mt-1" as={Link} to="/home/contact">Contact</Nav.Link>
           </div>
         </div>
         <div className={`d-flex align-items-center justify-content-start i ${location.pathname === '/register' && 'active'}`}>
