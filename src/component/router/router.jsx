@@ -16,7 +16,7 @@ import Register from "../pages/Register";
 
 export const router = createBrowserRouter([
   {
-    path: '/', element: <Main/>, errorElement:<ErrorPage/>,
+    path: '/', element: <Main />, errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Dashboard /> },
       { path: "/home/profile", element: <Profile /> },
@@ -25,14 +25,14 @@ export const router = createBrowserRouter([
       { path: "/home/contact", element: <Contact /> },
       { path: "/register", element: <Register /> },
       { path: "/login", element: <Login /> },
-      { path: "/error", element: <ErrorPage/> },
+      { path: "/error", element: <ErrorPage /> },
       { path: "/blank", element: <Blank /> },
-      { path: "/component/alert", element: <Alerts/> },
-      { path: "/component/accordion", element: <Accordion/> },
-      { path: "/component/badges", element: <Badges/> },
-      { path: "/component/breadcrumbs", element: <Breadcrumbs/> },
-      { path: "/component/buttons", element: <Buttons/> },
-      
+      { path: "/component/alert", element: <Alerts /> },
+      { path: "/component/accordion", element: <Accordion /> },
+      { path: "/component/badges", element: <Badges /> },
+      { path: "/component/breadcrumbs", element: <Breadcrumbs /> },
+      { path: "/component/buttons", element: <Buttons /> },
+
     ]
   },
 
