@@ -2,7 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Accordion from "../pages/Accordion";
 import Alerts from "../pages/Alerts";
+import Badges from "../pages/Badges";
 import Blank from "../pages/Blank";
+import Breadcrumbs from "../pages/Breadcrumbs";
+import Buttons from "../pages/Buttons";
 import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
@@ -26,6 +29,9 @@ export const router = createBrowserRouter([
       { path: "/blank", element: <Blank /> },
       { path: "/alert", element: <Alerts/> },
       { path: "/accordion", element: <Accordion/> },
+      { path: "/badges", element: <Badges/> },
+      { path: "/breadcrumbs", element: <Breadcrumbs/> },
+      { path: "/buttons", element: <Buttons/> },
       
     ]
   },

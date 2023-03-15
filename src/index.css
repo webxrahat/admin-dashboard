@@ -305,3 +305,19 @@ a:hover {
   padding: 10px 0 10px 40px;
   transition: 0.3s;
 }
+.down{
+  transform: rotate(360deg);
+  transition: all .2s ease-in-out;
+}
+.up{
+  transform: rotate(180deg);
+  transition: all .2s ease-in-out;
+}
+.menuDown{
+  display: none;
+  transition: all .3s ease-in-out;
+}
+.menuUp{
+  display: block;
+  transition: all .3s ease-in-out;
+}

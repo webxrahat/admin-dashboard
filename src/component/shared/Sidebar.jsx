@@ -1,14 +1,30 @@
+import { useState } from "react";
 import { Nav } from "react-bootstrap";
 import { BarChart, BoxArrowInRight, CardList, ChevronDown, Circle, DashCircle, Envelope, FileEarmark, Gem, Grid, JournalText, LayoutTextWindowReverse, MenuButtonWide, Person, QuestionCircle } from 'react-bootstrap-icons';
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = ({ sidebarOpen }) => {
+const Sidebar = ({ sidebarOpen, handleCollapse , collapse }) => {
+  const [collapse2 , setCollapse2] = useState(false)
+  const [collapse3 , setCollapse3] = useState(false)
+  const [collapse4 , setCollapse4] = useState(false)
+  const [collapse5 , setCollapse5] = useState(false)
+  const [active, setActive] = useState(false)
+  // const a = active ? "active" : "";
   // const router = useMatches()
   // console.log("router", router);
   const sidebarClass = sidebarOpen ? "sidebar-open" : "sidebar";
-
+  const collapseClass = collapse ? "menuUp" : "menuDown";
+  const upDownClass = collapse ? "up" : "down";
+  const collapseClass2 = collapse2 ? "menuUp" : "menuDown";
+  const upDownClass2 = collapse2 ? "up" : "down";
+  const collapseClass3 = collapse3 ? "menuUp" : "menuDown";
+  const upDownClass3 = collapse3 ? "up" : "down";
+  const collapseClass4 = collapse4 ? "menuUp" : "menuDown";
+  const upDownClass4 = collapse4 ? "up" : "down";
+  const collapseClass5 = collapse5 ? "menuUp" : "menuDown";
+  const upDownClass5 = collapse5 ? "up" : "down";
   const location = useLocation()
-
+  
   return (
     <aside className={`shadow-lg sidebar-open mt-4 pe-4 ps-3 ${sidebarClass}`}>
       <Nav className="flex-column  mt-3 align-items-start">
@@ -23,16 +39,16 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
 
         <li className="nav-item">
-          <div className={`d-flex align-items-center justify-content-between i ${location.pathname === '/component' && 'active'}`}>
-            <div className="d-flex justify-content-center align-items-center">
+          <div onClick={handleCollapse} className={`d-flex align-items-center justify-content-between i ${active ? "active": ""}`}>
+            <div onClick={()=> setActive(!active)} className="d-flex justify-content-center align-items-center">
               <MenuButtonWide />
               <Nav.Link className="mt-1">Components</Nav.Link>
             </div>
             <div className="ms">
-              <ChevronDown />
+              <ChevronDown className={`${upDownClass}`}/>
             </div>
           </div>
-          <ul className="nav-content collapse show">
+          <ul className={`nav-content collapse show ${collapseClass}`}>
             <li>
               <Nav.Link as={Link} to="/alert" className={`ms-4 ${location.pathname === '/alert' && 'sub'}`}>
                 <Circle className={`me-2 ${location.pathname === '/alert' && 'primary rounded'}`} size={6} />
@@ -66,16 +82,16 @@ const Sidebar = ({ sidebarOpen }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={()=> setCollapse2(!collapse2)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <JournalText />
               <Nav.Link className="mt-1">Forms</Nav.Link>
             </div>
             <div className="ms">
-              <ChevronDown />
+              <ChevronDown className={`${upDownClass2}`}/>
             </div>
           </div>
-          <ul className="nav-content collapse show">
+          <ul className={`nav-content collapse show ${collapseClass2}`}>
             <li>
               <Nav.Link className="ms-4">
                 <Circle className="me-2" size={6} />
@@ -91,16 +107,16 @@ const Sidebar = ({ sidebarOpen }) => {
           </ul>
         </li>
         <li className="nav-tem">
-          <div className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={()=> setCollapse3(!collapse3)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <LayoutTextWindowReverse />
               <Nav.Link className="mt-1">Tables</Nav.Link>
             </div>
             <div>
-              <ChevronDown />
+              <ChevronDown className={`${upDownClass3}`}/>
             </div>
           </div>
-          <ul className="nav-content collapse show">
+          <ul className={`nav-content collapse show ${collapseClass3}`}>
             <li>
               <Nav.Link className="ms-4">
                 <Circle className="me-2" size={6} />
@@ -116,16 +132,16 @@ const Sidebar = ({ sidebarOpen }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={()=> setCollapse4(!collapse4)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <BarChart />
               <Nav.Link className="mt-1">Charts</Nav.Link>
             </div>
             <div>
-              <ChevronDown />
+              <ChevronDown className={`${upDownClass4}`}/>
             </div>
           </div>
-          <ul className="nav-content collapse show">
+          <ul className={`nav-content collapse show ${collapseClass4}`}>
             <li>
               <Nav.Link className="ms-4">
                 <Circle className="me-2" size={6} />
@@ -141,16 +157,16 @@ const Sidebar = ({ sidebarOpen }) => {
           </ul>
         </li>
         <li className="nav-item">
-          <div className={`d-flex align-items-center justify-content-between i`}>
+          <div onClick={()=> setCollapse5(!collapse5)} className={`d-flex align-items-center justify-content-between i`}>
             <div className="d-flex justify-content-center align-items-center">
               <Gem />
               <Nav.Link className="mt-1">Icons</Nav.Link>
             </div>
             <div>
-              <ChevronDown />
+              <ChevronDown className={`${upDownClass5}`}/>
             </div>
           </div>
-          <ul className="nav-content collapse show">
+          <ul className={`nav-content collapse show ${collapseClass5}`}>
             <li>
               <Nav.Link className="ms-4">
                 <Circle className="me-2" size={6} />
